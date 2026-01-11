@@ -12,7 +12,7 @@ const Contact =() => {
              {/* Form Card */}
              <form
                className="w-full max-w-2xl mx-auto bg-white dark:bg-gray-800 rounded-2xl shadow-lg dark:shadow-black/40 p-8"
-               action="mailto:himashah910@gmail.com"
+               action="https://formspree.io/f/xnjjaywd"
                method="POST"
                encType="text/plain">
 
@@ -30,13 +30,19 @@ const Contact =() => {
                     <label className="block text-gray-400 mb-2">Your Message</label>
                     <textarea className="w-full px-6 py-2 rounded outline-none bg-white text-gray-900 border border-gray-300 dark:bg-gray-700 dark:text-gray-100 dark:border-gray-600 placeholder-gray-400" type="textarea" name="message" placeholder="Enter Your Message" required/>
                  </div>
-                 <div className="flex justify-center">
-                  <button
-                  type="submit"
+
+                 <input type="hidden" name="_next" value="https://himasha2003.github.io/my-portfolio-website/thank-you" />
+
+
+                 <div className="flex justify-center mt-4">
+                 <button
+                   onClick={() => {
+                   window.location.href = `mailto:himashah910@gmail.com?subject=Portfolio%20Contact&body=Hello%2C%20I%20would%20like%20to%20connect%20with%20you.`;
+                  }}
                   className="px-8 py-2 rounded-full bg-teal-600 text-white hover:bg-teal-700 dark:bg-teal-500 dark:hover:bg-teal-400 dark:text-black transition"
-                  >
-                  Send Message
-                  </button>
+                 >
+                 Send Message
+                 </button>
                  </div>
                 </div>
              </form>
